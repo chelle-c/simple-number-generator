@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src\RNG.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class="pane">
+        <div class="flex-container-space-between">
+            <h2>Number Generator</h2> <input type="button" value="Help" id="helpButton" class="help"/>
+        </div>
+        <div class="flex-container-space-between">
+            <textarea readonly id="generatedNumberBox"></textarea>
+        </div>
+        <div class="flex-container-space-between">
+            <div>Number to start from:</div>
+            <input type="number" id="numberRangeStart" min=1 value=1 />
+        </div>
+        <div class="flex-container-space-between">
+            <div>Number to end with:</div>
+            <input type="number" id="numberRangeEnd" min=2 value=10 />
+        </div>
+        <div class="flex-container-space-between">
+            <label for="sortCheckbox">Sort numbers?</label><input type="checkbox" id="sortCheckbox"/>
+        </div>
+        <div class="flex-container-space-between">
+            <div>
+                <input type="button" id="generateButton" value="Generate!">
+                <input type="button" id="resetButton" value="Reset">
+                <input type="button" id="clearButton" value="Reset all">
+            </div>
+        </div>
+        <p id="message" class="message"></p>
+      </div>
+    </section>
+
+    <section id="helpText" class="modal">
+        <div class="pane">
+            <p>This random number generator will take the two numbers given and will randomly find numbers between them. If a number was not already chosen, it will show up in the number list. Any number that is in this list will not be rolled again.
+              </p>
+              <p>
+                  Once a number is generated, you will be unable to change the number range or the ability to sort the numbers in the list.
+              </p>
+              <p>
+                  Press the "Reset" button to reset only the number list. Press "Reset all" to reset everything.
+              </p>
+              <input type="button" id="closeHelp" value="Close" />
+        </div>
+    </section>
+
+    <footer>
+      <h4>
+      Created April 2018, updated February 2020
+      </h4>
+    </footer>
+    <script src="src\RNG.js"></script>
+  </body>
+</html>
